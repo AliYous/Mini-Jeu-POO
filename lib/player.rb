@@ -26,9 +26,6 @@ class Player
 		damage = compute_damage	
 		puts "Il lui inflige #{damage} points de dommage.\n"
 		attacked_player.gets_damage(damage)
-
-
-		
 	end
 
 	#Génère aléatoirement les dégats causés lors d'une attaque
@@ -53,6 +50,13 @@ class HumanPlayer < Player
 
 	def show_state
 		puts "#{@name} a #{@life_points} points de vie et une arme de niveau #{@weapon_level}"
+	end
+
+	def attack(bot_to_attack)
+		puts "\nle joueur #{@name} attaque le bot #{bot_to_attack.name}"
+		damage = compute_damage	
+		puts "Il lui inflige #{damage} points de dommage.\n"
+		bot_to_attack.gets_damage(damage)
 	end
 
 	def compute_damage

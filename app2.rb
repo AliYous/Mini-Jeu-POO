@@ -31,7 +31,7 @@ def perform
         puts " attaquer un joueur en vue :"
         puts "  0 - #{player1.show_state}"
         puts "  1 - #{player2.show_state}"
-
+        print ">"
         user_input = gets.chomp
 
         system "clear"  #clear console
